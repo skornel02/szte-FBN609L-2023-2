@@ -1,0 +1,67 @@
+---
+import PdfViewer from "../components/PdfViewer.astro";
+import JegyzokonyvLayout from "../layouts/JegyzokonyvLayout.astro";
+
+---
+<script>
+    import 'mermaid/dist/mermaid.esm.min.mjs';
+</script>
+
+<JegyzokonyvLayout number={1}>
+    <h2 class="text-2xl text-center"> Feladatok </h2>
+    <PdfViewer link="http://titan.physx.u-szeged.hu/~opthome/dlabor/DL-01.pdf"/>
+    <h2 class="text-2xl text-center mt-8">
+        1. Feladat
+    </h2>
+    <pre class="mermaid"> 
+        graph TD; A --> B; A --> C; B --> D; C --> D; 
+    </pre>
+    <h2 class="text-2xl text-center mt-8">
+        2. Feladat
+    </h2>
+    <div class="bom">
+        <h3>BOM</h3>
+        <ul>
+            <li>R1 4,7kΩ ellenállás</li>
+            <li>R2 2,4kΩ ellenállás</li>
+            <li>1kΩ Potenciaméter</li>
+            <li>Tranzisztor</li>
+        </ul>
+    </div>
+    <h2 class="text-2xl text-center mt-8">
+        3. Feladat
+    </h2>
+    <div class="bom">
+        <h3>BOM</h3>
+        <ul>
+            <li>74LS04</li>
+            <li>R1 200Ω ellenállás</li>
+            <li>10kΩ Potenciaméter</li>
+            <li>Tranzisztor</li>
+        </ul>
+    </div>
+    <h2 class="text-2xl text-center mt-8">
+        4. Feladat
+    </h2>
+    <div class="bom">
+        <h3>BOM</h3>
+        <ul>
+            <li>74AHC04</li>
+            <li>R1 200Ω ellenállás</li>
+            <li>10kΩ Potenciaméter</li>
+            <li>Tranzisztor</li>
+        </ul>
+    </div>
+    <h2 class="text-2xl text-center mt-8">
+        5. Feladat
+    </h2>
+    <div class="bom">
+        <h3>BOM</h3>
+        <ul>
+            <li>74AHCT14</li>
+            <li>R1 200Ω ellenállás</li>
+            <li>10kΩ Potenciaméter</li>
+            <li>Tranzisztor</li>
+        </ul>
+    </div>
+</JegyzokonyvLayout>

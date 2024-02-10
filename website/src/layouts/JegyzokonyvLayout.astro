@@ -1,0 +1,65 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+    number: number;
+}
+
+const { number } = Astro.props;
+---
+
+<script>
+    import "giscus";
+</script>
+
+<Layout title={`${number}. jegyzőkönyv - SZTE Digitális labor`}>
+    <main class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold dark:text-white text-center mb-12">
+            {number}. Jegyzőkönyv
+        </h1>
+
+        <article class="page-break">
+            <slot/>
+        </article>
+
+        <div class="divider">Komment szekció</div>
+        <div class="giscus-comments">
+            <giscus-widget
+                id="giscus-comments"
+                repo="skornel02/szte-FBN509L-2023-1"
+                repoid="R_kgDOKTLOEQ"
+                category="General"
+                categoryid="DIC_kwDOKTLOEc4CbztX"
+                mapping="title"
+                term="Welcome to giscus!"
+                reactionsenabled="1"
+                emitmetadata="0"
+                inputposition="top"
+                theme="preferred_color_scheme"
+                lang="en"
+                loading="lazy"
+            >
+            </giscus-widget>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    main {
+        max-width: 1024px;
+    }
+    
+    .giscus-comments {
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    @media print {
+        .divider {
+            display: none;
+        }
+        .giscus-comments {
+            display: none;
+        }
+    }
+</style>

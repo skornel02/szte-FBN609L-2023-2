@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="SZTE Digitális labor">
+    <main class="container m-auto">
+        <h1 class="text-xl text-center">Üdvözlünk a weboldalon!</h1>
+        <p class="text-center">
+            Ezen a weboldalon megtalálható az digitális laborjaink
+            jegyzőkönyve és a hozzá tartozó számolások (és feladatok).
+        </p>
+        <div class="tooltip my-4" data-tip="Sőt, biztos!">
+            <div class="chat chat-start">
+                <div class="chat-bubble chat-bubble-warning">
+                    A jegyzőkönyvek <span class="uppercase font-bold"
+                        >tartalmazhatnak</span
+                    > hibákat!
+                </div>
+            </div>
+        </div>
+        <div class="chat chat-end my-2">
+            <div class="chat-bubble chat-bubble-info">
+                Aki nem hiszi, járjon utána!
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    main {
+        max-width: 1024px;
+    }
+</style>
