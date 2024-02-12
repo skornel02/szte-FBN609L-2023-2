@@ -1,2 +1,5 @@
-schemdraw[matplotlib]
 ipykernel
+matplotlib
+schemdraw[matplotlib]
+ttable
+graphviz
