@@ -7,6 +7,7 @@ export default defineConfig({
   base: '/szte-FBN509L-2023-1',
   markdown: {
     gfm: true,
+    syntaxHighlight: 'prism',
   },
   integrations: [
     tailwind(),
