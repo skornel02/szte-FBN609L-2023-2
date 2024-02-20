@@ -5,3 +5,5 @@ graphviz
 pandas
 notebook
 nbconvert
+sympy
+tabulate
