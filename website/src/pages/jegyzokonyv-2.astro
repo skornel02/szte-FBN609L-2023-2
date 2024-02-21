@@ -1,8 +1,15 @@
 ---
+import PdfViewer from "../components/PdfViewer.astro";
 import JegyzokonyvLayout from "../layouts/JegyzokonyvLayout.astro";
+import Notebook02 from '../notebooks/jegyzokonyv02.md';
 
 ---
 
 <JegyzokonyvLayout number={2}>
-
+    <h2 class="text-2xl text-center"> Feladatok </h2>
+    <PdfViewer link="http://titan.physx.u-szeged.hu/~opthome/dlabor/DL-02.pdf"/>
+    <h2 class="text-2xl text-center mt-8">
+        Számolások (Jupyter notebookok)
+    </h2>
+    <Notebook02 />
 </JegyzokonyvLayout>
