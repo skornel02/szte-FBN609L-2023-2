@@ -1,4 +1,4 @@
-# Jegyzőkönyv 1
+# Jegyzőkönyv 1 számolások
 
 
 
@@ -7,6 +7,16 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 ```
+
+    C:\Users\Kornel\AppData\Local\Temp\ipykernel_15804\2151744951.py:1: DeprecationWarning: 
+    Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+    (to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+    but was not found to be installed on your system.
+    If this would cause problems for you,
+    please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+            
+      import pandas as pd
+    
 
 ## 1. feladat
 
@@ -155,7 +165,7 @@ plt.show()
     
 
 
-## 3. feladat
+## 3-4-5. feladat
 
 ### Áramkörök
 
@@ -170,21 +180,308 @@ plt.show()
 
 
 ```python
-v_be = pd.array([
+r = 10
+
+fel3_v_be = pd.array([
     0.212,
     4.851,
 ])
 
-v_ki = pd.array([
+fel3_iv_be = pd.array([
+    0.00001,
+    0.00001,
+])
+
+fel3_i_be = fel3_iv_be / r
+
+fel3_v_ki = pd.array([
     4.185,
     0.148,
 ])
 
-r_be = pd.array([
+fel4_v_be = pd.array([
+    0.212,
+    4.851,
+])
+
+fel4_iv_be = pd.array([
+    0.00001,
+    0.00001,
+])
+
+fel4_i_be = fel4_iv_be / r
+
+fel4_v_ki = pd.array([
+    4.185,
+    0.148,
+])
+
+fel5_v_be = pd.array([
+    0.212,
+    4.851,
+])
+
+fel5_iv_be = pd.array([
+    0.00001,
+    0.00001,
+])
+
+fel5_i_be = fel5_iv_be / r
+
+fel5_v_ki = pd.array([
+    4.185,
+    0.148,
+])
+
+# plot v_ki by v_be, then i_be by v_be
+fig, ax = plt.subplots(nrows=2, ncols=3, figsize=(15, 10))
+fig.suptitle('Transzfer karakterisztika és inverter bemeneti karaktarisztika')
+
+ax[0][0].plot(fel3_v_be, fel3_v_ki, 'ro-')
+ax[0][0].title.set_text('3. feladat')
+ax[0][0].set_xlabel('v_be (V)')
+ax[0][0].set_ylabel('v_ki (V)')
+ax[0][0].grid()
+
+ax[0][1].plot(fel4_v_be, fel4_v_ki, 'ro-')
+ax[0][1].title.set_text('4. feladat')
+ax[0][1].set_xlabel('v_be (V)')
+ax[0][1].set_ylabel('v_ki (V)')
+ax[0][1].grid()
+
+ax[0][2].plot(fel5_v_be, fel5_v_ki, 'ro-')
+ax[0][2].title.set_text('5. feladat')
+ax[0][2].set_xlabel('v_be (V)')
+ax[0][2].set_ylabel('v_ki (V)')
+ax[0][2].grid()
+
+ax[1][0].plot(fel3_v_be, fel3_i_be, 'ro-')
+ax[1][0].title.set_text('3. feladat')
+ax[1][0].set_xlabel('v_be (V)')
+ax[1][0].set_ylabel('i_be (A)')
+ax[1][0].grid()
+
+ax[1][1].plot(fel4_v_be, fel4_i_be, 'ro-')
+ax[1][1].title.set_text('4. feladat')
+ax[1][1].set_xlabel('v_be (V)')
+ax[1][1].set_ylabel('i_be (A)')
+ax[1][1].grid()
+
+ax[1][2].plot(fel5_v_be, fel5_i_be, 'ro-')
+ax[1][2].title.set_text('5. feladat')
+ax[1][2].set_xlabel('v_be (V)')
+ax[1][2].set_ylabel('i_be (A)')
+ax[1][2].grid()
+```
+
+
+    
+![png](./jegyzokonyv01/output_11_0.png)
+    
+
+
+
+```python
+r = 200
+
+fel3_r_load = pd.array([
+    100,
     1000,
 ])
 
-i_be = pd.array([
-    
-]) / r_be
+fel3_iv_ki = pd.array([
+    0.00001,
+    0.00001,
+])
+
+fel3_i_ki = fel3_iv_ki / r
+
+fel3_v_ki = pd.array([
+    4.185,
+    4.185,
+])
+
+fel4_r_load = pd.array([
+    100,
+    1000,
+])
+
+fel4_iv_ki = pd.array([
+    0.00001,
+    0.00001,
+])
+
+fel4_i_ki = fel4_iv_ki / r
+
+fel4_v_ki = pd.array([
+    4.185,
+    4.185,
+])
+
+fel5_r_load = pd.array([
+    100,
+    1000,
+])
+
+fel5_iv_ki = pd.array([
+    0.00001,
+    0.00001,
+])
+
+fel5_i_ki = fel5_iv_ki / r
+
+fel5_v_ki = pd.array([
+    4.185,
+    4.185,
+])
+
+
+fig, ax = plt.subplots(nrows=2, ncols=3, figsize=(15, 10))
+fig.suptitle('Kimeneti karakterisztika terhelés függvényében logikai IGAZnál')
+
+ax[0][0].plot(fel3_r_load, fel3_v_ki, 'ro-')
+ax[0][0].title.set_text('3. feladat')
+ax[0][0].set_xlabel('R_load (Ω)')
+ax[0][0].set_ylabel('v_ki (V)')
+ax[0][0].grid()
+
+ax[0][1].plot(fel4_r_load, fel4_v_ki, 'ro-')
+ax[0][1].title.set_text('4. feladat')
+ax[0][1].set_xlabel('R_load (Ω)')
+ax[0][1].set_ylabel('v_ki (V)')
+ax[0][1].grid()
+
+ax[0][2].plot(fel5_r_load, fel5_v_ki, 'ro-')
+ax[0][2].title.set_text('5. feladat')
+ax[0][2].set_xlabel('R_load (Ω)')
+ax[0][2].set_ylabel('v_ki (V)')
+ax[0][2].grid()
+
+ax[1][0].plot(fel3_r_load, fel3_i_ki, 'ro-')
+ax[1][0].title.set_text('3. feladat')
+ax[1][0].set_xlabel('R_load (Ω)')
+ax[1][0].set_ylabel('i_ki (A)')
+ax[1][0].grid()
+
+ax[1][1].plot(fel4_r_load, fel4_i_ki, 'ro-')
+ax[1][1].title.set_text('4. feladat')
+ax[1][1].set_xlabel('R_load (Ω)')
+ax[1][1].set_ylabel('i_ki (A)')
+ax[1][1].grid()
+
+ax[1][2].plot(fel5_r_load, fel5_i_ki, 'ro-')
+ax[1][2].title.set_text('5. feladat')
+ax[1][2].set_xlabel('R_load (Ω)')
+ax[1][2].set_ylabel('i_ki (A)')
+ax[1][2].grid()
+
+
 ```
+
+
+    
+![png](./jegyzokonyv01/output_12_0.png)
+    
+
+
+
+```python
+r = 200
+
+fel3_r_load = pd.array([
+    100,
+    1000,
+])
+
+fel3_iv_ki = pd.array([
+    0.00001,
+    0.00001,
+])
+
+fel3_i_ki = fel3_iv_ki / r
+
+fel3_v_ki = pd.array([
+    4.185,
+    4.185,
+])
+
+fel4_r_load = pd.array([
+    100,
+    1000,
+])
+
+fel4_iv_ki = pd.array([
+    0.00001,
+    0.00001,
+])
+
+fel4_i_ki = fel4_iv_ki / r
+
+fel4_v_ki = pd.array([
+    4.185,
+    4.185,
+])
+
+fel5_r_load = pd.array([
+    100,
+    1000,
+])
+
+fel5_iv_ki = pd.array([
+    0.00001,
+    0.00001,
+])
+
+fel5_i_ki = fel5_iv_ki / r
+
+fel5_v_ki = pd.array([
+    4.185,
+    4.185,
+])
+
+
+fig, ax = plt.subplots(nrows=2, ncols=3, figsize=(15, 10))
+fig.suptitle('Kimeneti karakterisztika terhelés függvényében logikai HAMISnál')
+
+ax[0][0].plot(fel3_r_load, fel3_v_ki, 'ro-')
+ax[0][0].title.set_text('3. feladat')
+ax[0][0].set_xlabel('R_load (Ω)')
+ax[0][0].set_ylabel('v_ki (V)')
+ax[0][0].grid()
+
+ax[0][1].plot(fel4_r_load, fel4_v_ki, 'ro-')
+ax[0][1].title.set_text('4. feladat')
+ax[0][1].set_xlabel('R_load (Ω)')
+ax[0][1].set_ylabel('v_ki (V)')
+ax[0][1].grid()
+
+ax[0][2].plot(fel5_r_load, fel5_v_ki, 'ro-')
+ax[0][2].title.set_text('5. feladat')
+ax[0][2].set_xlabel('R_load (Ω)')
+ax[0][2].set_ylabel('v_ki (V)')
+ax[0][2].grid()
+
+ax[1][0].plot(fel3_r_load, fel3_i_ki, 'ro-')
+ax[1][0].title.set_text('3. feladat')
+ax[1][0].set_xlabel('R_load (Ω)')
+ax[1][0].set_ylabel('i_ki (A)')
+ax[1][0].grid()
+
+ax[1][1].plot(fel4_r_load, fel4_i_ki, 'ro-')
+ax[1][1].title.set_text('4. feladat')
+ax[1][1].set_xlabel('R_load (Ω)')
+ax[1][1].set_ylabel('i_ki (A)')
+ax[1][1].grid()
+
+ax[1][2].plot(fel5_r_load, fel5_i_ki, 'ro-')
+ax[1][2].title.set_text('5. feladat')
+ax[1][2].set_xlabel('R_load (Ω)')
+ax[1][2].set_ylabel('i_ki (A)')
+ax[1][2].grid()
+```
+
+
+    
+![png](./jegyzokonyv01/output_13_0.png)
+    
+
