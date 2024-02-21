@@ -34,7 +34,7 @@ logic.Table(truth_table, colfmt='c|c||c', fontsize=18, font="times new roman")
 
 
     
-![svg](output_3_0.svg)
+![svg](./jegyzokonyv02/output_3_0.svg)
     
 
 
@@ -48,7 +48,7 @@ logicparse('Q ⊕ V', outlabel="Y")
 
 
     
-![svg](output_4_0.svg)
+![svg](./jegyzokonyv02/output_4_0.svg)
     
 
 
@@ -62,7 +62,7 @@ logicparse('(Q and not V) or (not Q and V)', outlabel="Y")
 
 
     
-![svg](output_5_0.svg)
+![svg](./jegyzokonyv02/output_5_0.svg)
     
 
 
@@ -89,7 +89,7 @@ logic.Table(truth_table, colfmt='c|c|c||c', fontsize=18, font="times new roman")
 
 
     
-![svg](output_7_0.svg)
+![svg](./jegyzokonyv02/output_7_0.svg)
     
 
 
@@ -103,7 +103,7 @@ logicparse('(S and X0) or (not S and X1)', outlabel="Y")
 
 
     
-![svg](output_8_0.svg)
+![svg](./jegyzokonyv02/output_8_0.svg)
     
 
 
@@ -133,7 +133,7 @@ logic.Table(truth_table, colfmt='c|c||c|c|c|c', fontsize=18, font="times new rom
 
 
     
-![svg](output_10_0.svg)
+![svg](./jegyzokonyv02/output_10_0.svg)
     
 
 
@@ -147,7 +147,7 @@ logicparse('A1 or A0', outlabel="Y0")
 
 
     
-![svg](output_11_0.svg)
+![svg](./jegyzokonyv02/output_11_0.svg)
     
 
 
@@ -161,7 +161,7 @@ logicparse('not A0 or A1', outlabel="Y1")
 
 
     
-![svg](output_12_0.svg)
+![svg](./jegyzokonyv02/output_12_0.svg)
     
 
 
@@ -175,7 +175,7 @@ logicparse('A0 or not A1', outlabel="Y2")
 
 
     
-![svg](output_13_0.svg)
+![svg](./jegyzokonyv02/output_13_0.svg)
     
 
 
@@ -189,7 +189,7 @@ logicparse('A1 nand A0', outlabel="Y3")
 
 
     
-![svg](output_14_0.svg)
+![svg](./jegyzokonyv02/output_14_0.svg)
     
 
 
@@ -226,7 +226,7 @@ logic.Table(truth_table, colfmt='c|c|c|c||c|c', fontsize=18, font="times new rom
 
 
     
-![svg](output_17_0.svg)
+![svg](./jegyzokonyv02/output_17_0.svg)
     
 
 

@@ -21,6 +21,7 @@ for notebook in notebooks:
     # replace `![png](NAME.png)` with `![png](./{notebook}/NAME.png)` in body
     for name, data in resources['outputs'].items():
         body = body.replace(f"![png]({name})", f"![png](./{notebook.replace('.ipynb', '')}/{name})")
+        body = body.replace(f"![svg]({name})", f"![svg](./{notebook.replace('.ipynb', '')}/{name})")
 
     # write to a new file
     with open("website/src/notebooks/" + notebook.replace('.ipynb', '.md'), 'w', encoding='utf-8') as f:
