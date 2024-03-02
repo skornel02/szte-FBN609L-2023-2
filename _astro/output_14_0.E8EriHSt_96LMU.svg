@@ -6,11 +6,11 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2024-02-21T20:19:15.721016</dc:date>
+    <dc:date>2024-02-22T19:20:36.300071</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.8.2, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.8.3, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -41,7 +41,7 @@ C 77.703906 24.545677 78.159089 25.644585 78.969205 26.454701
 C 79.779321 27.264818 80.878229 27.72 82.023906 27.72 
 L 82.023906 27.72 
 z
-" clip-path="url(#pf6e7c76647)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pb6187350d4)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="line2d_1">
     <path d="M 59.703906 41.4 
@@ -99,22 +99,22 @@ L 36.303906 5.4
 L 36.303906 23.4 
 L 36.303906 41.4 
 L 59.703906 41.4 
-" clip-path="url(#pf6e7c76647)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+" clip-path="url(#pb6187350d4)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_2">
     <path d="M 23.703906 32.4 
 L 36.303906 32.4 
-" clip-path="url(#pf6e7c76647)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+" clip-path="url(#pb6187350d4)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_3">
     <path d="M 23.703906 14.4 
 L 36.303906 14.4 
-" clip-path="url(#pf6e7c76647)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+" clip-path="url(#pb6187350d4)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_4">
     <path d="M 86.343906 23.4 
 L 90.303906 23.4 
-" clip-path="url(#pf6e7c76647)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+" clip-path="url(#pb6187350d4)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="text_1">
     <!-- Y3 -->
@@ -241,7 +241,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pf6e7c76647">
+  <clipPath id="pb6187350d4">
    <rect x="20.373906" y="3.6" width="73.26" height="39.6"/>
   </clipPath>
  </defs>
