@@ -41,7 +41,7 @@ logic.Table(truth_table, colfmt='c|c||c', fontsize=18, font="times new roman")
 
 
 ```python
-logicparse('Q ⊕ V', outlabel="Y")
+logicparse('X ⊕ V', outlabel="Y")
 ```
 
 
@@ -55,7 +55,7 @@ logicparse('Q ⊕ V', outlabel="Y")
 
 
 ```python
-logicparse('(Q and not V) or (not Q and V)', outlabel="Y")
+logicparse('(X and not V) or (not X and V)', outlabel="Y")
 ```
 
 

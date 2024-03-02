@@ -6,11 +6,11 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2024-02-21T20:18:41.089162</dc:date>
+    <dc:date>2024-02-22T19:20:36.044035</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.8.2, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.8.3, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -76,22 +76,22 @@ L 38.895906 37.764
 L 36.995106 39.924 
 L 36.303906 40.644 
 L 36.303906 40.644 
-" clip-path="url(#pf9d13ac937)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+" clip-path="url(#p381f725aa0)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_2">
     <path d="M 23.703906 32.004 
 L 42.697506 32.004 
-" clip-path="url(#pf9d13ac937)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+" clip-path="url(#p381f725aa0)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_3">
     <path d="M 23.703906 14.004 
 L 42.697506 14.004 
-" clip-path="url(#pf9d13ac937)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+" clip-path="url(#p381f725aa0)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="line2d_4">
     <path d="M 79.503906 23.004 
 L 92.103906 23.004 
-" clip-path="url(#pf9d13ac937)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
+" clip-path="url(#p381f725aa0)" style="fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="text_1">
     <!-- Y0 -->
@@ -184,7 +184,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pf9d13ac937">
+  <clipPath id="p381f725aa0">
    <rect x="20.283906" y="3.6" width="75.24" height="38.808"/>
   </clipPath>
  </defs>
