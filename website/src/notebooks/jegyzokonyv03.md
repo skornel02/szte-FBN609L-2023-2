@@ -12,15 +12,11 @@ from sympy import symbols, Not, Or, And
 from sympy.logic.boolalg import simplify_logic
 ```
 
-    C:\Users\Kornel\AppData\Local\Temp\ipykernel_24120\652453753.py:1: DeprecationWarning: 
-    Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
-    (to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
-    but was not found to be installed on your system.
-    If this would cause problems for you,
-    please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
-            
-      import pandas as pd
-    
+
+```python
+def logic_form_print(formula) -> None:
+    print(str(formula).upper().replace("|", "∪").replace("&", "∩").replace(" ", ""))
+```
 
 ## 1. feladat: 2 bites komparátor
 
@@ -58,7 +54,7 @@ logic.Table(truth_table, colfmt='c|c|c|c||c|c|c', fontsize=18, font="times new r
 
 
     
-![svg](./jegyzokonyv03/output_3_0.svg)
+![svg](./jegyzokonyv03/output_4_0.svg)
     
 
 
@@ -68,30 +64,30 @@ logic.Table(truth_table, colfmt='c|c|c|c||c|c|c', fontsize=18, font="times new r
 
 ```python
 equivalence_equation = (a1 & a0 & b1 & b0) \
-    | (~a1 & a0 & ~b1) \
+    | (~a1 & a0 & ~b1 & b0) \
     | (a1 & ~a0 & b1 & ~b0) \
     | (~a1 & ~a0 & ~b1 & ~b0)
 
 print("= minterm:")
-print(equivalence_equation)
+logic_form_print(equivalence_equation)
 
 simplified_equivalence = simplify_logic(equivalence_equation)
 print("Simplified:")
-print(simplified_equivalence)
+logic_form_print(simplified_equivalence)
 logicparse(str(simplified_equivalence), outlabel="=")
 ```
 
     = minterm:
-    (a0 & a1 & b0 & b1) | (a0 & ~a1 & ~b1) | (a1 & b1 & ~a0 & ~b0) | (~a0 & ~a1 & ~b0 & ~b1)
+    (A0∩A1∩B0∩B1)∪(A0∩B0∩~A1∩~B1)∪(A1∩B1∩~A0∩~B0)∪(~A0∩~A1∩~B0∩~B1)
     Simplified:
-    (a0 | ~b0) & (a1 | ~b1) & (b1 | ~a1) & (b0 | ~a0 | ~b1)
+    (A0∪~B0)∩(A1∪~B1)∩(B0∪~A0)∩(B1∪~A1)
     
 
 
 
 
     
-![svg](./jegyzokonyv03/output_5_1.svg)
+![svg](./jegyzokonyv03/output_6_1.svg)
     
 
 
@@ -123,7 +119,7 @@ logicparse(str(simplified_bigger), outlabel=">")
 
 
     
-![svg](./jegyzokonyv03/output_7_1.svg)
+![svg](./jegyzokonyv03/output_8_1.svg)
     
 
 
@@ -148,14 +144,14 @@ logicparse(str(simplified_bigger), outlabel="<")
     < minterm:
     (b1 & ~a1 & ~b0) | (b0 & b1 & ~(a0 & a1)) | (b0 & ~a0 & ~a1 & ~b1)
     < simplified:
-    (b0 | b1) & (b0 | ~a1) & (b1 | ~a0) & (b1 | ~a1) & (~a0 | ~a1)
+    (B0∪B1)∩(B0∪~A1)∩(B1∪~A0)∩(B1∪~A1)∩(~A0∪~A1)
     
 
 
 
 
     
-![svg](./jegyzokonyv03/output_9_1.svg)
+![svg](./jegyzokonyv03/output_10_1.svg)
     
 
 
@@ -210,7 +206,7 @@ print(f"Midpoint: {((temp[0] + temp[1]) / 2)}, approximate resistance: {((resist
 
 
     
-![png](./jegyzokonyv03/output_13_1.png)
+![png](./jegyzokonyv03/output_14_1.png)
     
 
 
