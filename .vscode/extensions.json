@@ -2,6 +2,7 @@
     "recommendations": [
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter",
-        "ms-python.python"
+        "ms-python.python",
+        "ms-python.black-formatter"
     ]
 }
