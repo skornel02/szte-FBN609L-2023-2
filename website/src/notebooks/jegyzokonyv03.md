@@ -144,7 +144,7 @@ logicparse(str(simplified_bigger), outlabel="<")
     < minterm:
     (b1 & ~a1 & ~b0) | (b0 & b1 & ~(a0 & a1)) | (b0 & ~a0 & ~a1 & ~b1)
     < simplified:
-    (B0∪B1)∩(B0∪~A1)∩(B1∪~A0)∩(B1∪~A1)∩(~A0∪~A1)
+    (b0 | b1) & (b0 | ~a1) & (b1 | ~a0) & (b1 | ~a1) & (~a0 | ~a1)
     
 
 
@@ -163,6 +163,11 @@ logicparse(str(simplified_bigger), outlabel="<")
 ## 2. feladat: Digitális kulcs lakat
 
 Egy 4 bites kulcsot ellenőrzünk le, hogy a nálunk tárolt 4 bites kulccsal eggyezik-e.
+
+### Kulcs
+
+![Kulcs előről](./jegyzokonyv03/kulcs1.jpg)
+![Kulcs hátulról](./jegyzokonyv03/kulcs2.jpg)
 
 ### Áramkör
 
@@ -190,9 +195,9 @@ resistance = [10.00 * 10**3,
 
 plt.plot(temp, resistance, '-')
 
-plt.xlabel('Temperature (°C)')
-plt.ylabel('Resistance (Ω)')
-plt.title('Themistor Resistance vs Temperature')
+plt.xlabel('Hőmérséklet (°C)')
+plt.ylabel('Ellenállás (Ω)')
+plt.title('Themistor ellenállása a hőmérséklet függvényében')
 
 plt.axvline((temp[0] + temp[1]) / 2, color='black', lw=2)
 plt.axhline((resistance[0] + resistance[1]) / 2, color='black', lw=2)
