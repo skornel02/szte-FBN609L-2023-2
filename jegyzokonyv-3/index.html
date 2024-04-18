@@ -8,13 +8,10 @@ Katt ide a megnyitásához!
 </a> </object> </div> </div>  <h2 class="text-2xl text-center mt-8">
 Számolások (Jupyter notebookok)
 </h2> <h1 id="jegyzőkönyv-3-számolások">Jegyzőkönyv 3 számolások</h1>
-<pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">import</span> schemdraw
+<pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
 <span class="token keyword">from</span> schemdraw <span class="token keyword">import</span> logic
 <span class="token keyword">from</span> schemdraw<span class="token punctuation">.</span>parsing <span class="token keyword">import</span> logicparse
-<span class="token keyword">from</span> sympy <span class="token keyword">import</span> symbols<span class="token punctuation">,</span> Not<span class="token punctuation">,</span> Or<span class="token punctuation">,</span> And
+<span class="token keyword">from</span> sympy <span class="token keyword">import</span> symbols
 <span class="token keyword">from</span> sympy<span class="token punctuation">.</span>logic<span class="token punctuation">.</span>boolalg <span class="token keyword">import</span> simplify_logic</code></pre>
 <pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">def</span> <span class="token function">logic_form_print</span><span class="token punctuation">(</span>formula<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>formula<span class="token punctuation">)</span><span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"|"</span><span class="token punctuation">,</span> <span class="token string">"∪"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"&#x26;"</span><span class="token punctuation">,</span> <span class="token string">"∩"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
@@ -44,7 +41,7 @@ x | x| 1| 1| 0| 1| 0
 """</span>
 
 logic<span class="token punctuation">.</span>Table<span class="token punctuation">(</span>truth_table<span class="token punctuation">,</span> colfmt<span class="token operator">=</span><span class="token string">'c|c|c|c||c|c|c'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">,</span> font<span class="token operator">=</span><span class="token string">"times new roman"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_4_0.Nyz2F2O__1BSlIT.svg" width="251.2548" height="312.12" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_4_0.kGli-Qdg_Z2jjFbj.svg" width="251.2548" height="312.12" loading="lazy" decoding="async"></p>
 <h3 id="-kimenet-logikai-egyszerűsítés"><code>=</code> kimenet logikai egyszerűsítés</h3>
 <pre class="language-python"><code is:raw="" class="language-python">equivalence_equation <span class="token operator">=</span> <span class="token punctuation">(</span>a1 <span class="token operator">&#x26;</span> a0 <span class="token operator">&#x26;</span> b1 <span class="token operator">&#x26;</span> b0<span class="token punctuation">)</span> \
     <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token operator">~</span>a1 <span class="token operator">&#x26;</span> a0 <span class="token operator">&#x26;</span> <span class="token operator">~</span>b1 <span class="token operator">&#x26;</span> b0<span class="token punctuation">)</span> \
@@ -67,7 +64,7 @@ Simplified:
 
 
 </code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_6_1.kARow4Sw_Z2ciCOj.svg" width="256.763281" height="239.454" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_6_1.fvS-ebTh_27daqS.svg" width="256.763281" height="239.454" loading="lazy" decoding="async"></p>
 <h3 id="-kimenet-logikai-egyszerűsítés-1"><code>></code> kimenet logikai egyszerűsítés</h3>
 <pre class="language-python"><code is:raw="" class="language-python">bigger_equation <span class="token operator">=</span> <span class="token punctuation">(</span>a1 <span class="token operator">&#x26;</span> a0 <span class="token operator">&#x26;</span> <span class="token operator">~</span><span class="token punctuation">(</span>b1 <span class="token operator">&#x26;</span> b0<span class="token punctuation">)</span><span class="token punctuation">)</span> \
     <span class="token operator">|</span> <span class="token punctuation">(</span>a1 <span class="token operator">&#x26;</span> <span class="token operator">~</span>a0 <span class="token operator">&#x26;</span> <span class="token operator">~</span>b1<span class="token punctuation">)</span> \
@@ -89,7 +86,7 @@ logicparse<span class="token punctuation">(</span><span class="token builtin">st
 
 
 </code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_8_1.G7aBqgMv_ZhGCO3.svg" width="256.763281" height="298.854" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_8_1.425fP54b_Z1cTjaH.svg" width="256.763281" height="298.854" loading="lazy" decoding="async"></p>
 <h3 id="-kimenet-logikai-egyszerűsítés-2"><code>&#x3C;</code> kimenet logikai egyszerűsítés</h3>
 <pre class="language-python"><code is:raw="" class="language-python">bigger_equation <span class="token operator">=</span> <span class="token punctuation">(</span>b1 <span class="token operator">&#x26;</span> b0 <span class="token operator">&#x26;</span> <span class="token operator">~</span><span class="token punctuation">(</span>a1 <span class="token operator">&#x26;</span> a0<span class="token punctuation">)</span><span class="token punctuation">)</span> \
     <span class="token operator">|</span> <span class="token punctuation">(</span>b1 <span class="token operator">&#x26;</span> <span class="token operator">~</span>b0 <span class="token operator">&#x26;</span> <span class="token operator">~</span>a1<span class="token punctuation">)</span> \
@@ -111,7 +108,7 @@ logicparse<span class="token punctuation">(</span><span class="token builtin">st
 
 
 </code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_10_1.tyORktKs_LoVg6.svg" width="256.487891" height="298.854" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_10_1.U-AboxyL_1nu6rr.svg" width="256.487891" height="298.854" loading="lazy" decoding="async"></p>
 <h3 id="áramkör">Áramkör</h3>
 <p><a href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgAZEJwm8Gvjz7FCUMQDMAhgBsAzg2qROIbCn59VIEWKpS5CpEq5UwAsdqq6Z8xcqabTgzRYnWDUNgA9uGUXkE05HjkfCh8AILs3kxmBNxgSHhIoRFK0WBqePRgQaIpIABCUSBoIP60xGUhJXwFSglqOaJgxGpoeOCtYmpICGwJVCh4HS1qqiZdVHy9bACS6iX44L6LHZbQMwCyKoQjZti7WqKDG2zbNHALF1QuKKfnDmZ0aren3gcQWCoYiVM1IAAdACOXloKHoXzoQT+YRAAB5QdgupDIH4YXwAHxzBaYRorXE6DYUfoIPGiFAIclLCnHErUPrzRwqA7LUTYFnrGYNVkqUrtXmWOkzRlPS5NWiXTnE7ni7DlflyviDelsADuPPF9jJHnVWp5eqZSnVjw0bSWRt5qxx5rVVtGJVh9otKEdhEGjsmtpdfDAbpKw3AfudFx5QxGK2Dg0pVppOpK0f5sfGcaTfKWyedGDasIJipTWZU8thecz2dCAe9cfFYSoQhqlltdZr3F4CwtJjMgwL7ZKBaZBItmgVY0gSttmlwPpWk7jBpWevZx0bE5ZTMXca7aioBzWtu3h1lhwtTZDdeus9b56Z58j8fJIfFzoT1IrNplKwEHX5n+6Yj66vFZ4Wz4IDj0vTQz0lZcxhZPUaFbY9NHgqc8gQklBgDSlt1KLC-z-ccDy6ZMnQIkYiIPTsvUwoZex6GjSwoGiCR-Bif2-Ghd3VSs8wVcp6lJHkEAyK0hK3IViRFaYaPFUk1igIkGQWBAuhkyZ5K5ASZPxJYEAjcTFKZQho3FIzaRgDTtV4QYlis39hQWLMTBWRzCQsnkMFHK0PKVfTsUMgMTIDKU+m8UoaC6cKKmSf46lBFg1HCiAcgqECYuKGIQOIWsEgqeh8nCNIfDyLoYhCYhothSJoNoVs4IsarwuaD96uNEdTUYziROE2NRJTaNep6yiuP6swwwoIbgIoP0ZKDcc6I6TRlK3OaKBUswlo3HY5NkzadqZHawOmP0z00Q6ptrVtCFhM6rpQkBbt2+j7ujHtTIWN7nR0-EQ10pcuJ+76qFw29cLG4GvRskNY1sp9RFsnqIy9fr8UwxGuKWbzaJATGGMxgkNoYjawc9dUqA++6gr3Cm9j4XZOsWoi1BcwcmdKJlmdtK9RSB2b1XPXDk3BvmTVoTRhgbYXMjwbCqHF-MXm6gNiGEhiwEgHMC2V5b0ZGdXQj7PW+r8bQxrwFq7yOKNjb+q0RCty2UxDOXTelx3ZZNp3Xc+jozfvd2bdjPBW1NtDhr8IdoyDscdbKCPw+WyTkCWcU1fNdTpU0lY1ZzZPDeVeymTVh8s9HQVzIz7U7dtoNfMTsgmtEevXIrnlfatNv84khYtZ5Hvgr82IONbof+-feP29O3yuILXwvwxo8vQLfwvxnheuIDZesc3-iMJ913kzloH8LH7HDn5WffyBuKMA6DB4O4SK78qfL0vvu-BGSu-qkqwqWD4O+kA5Tvh0fIRRQRgFvvfQI2NIqgJZtjUomgfja0tMg9yAkLTihvj5bBm1cFk0pq1bGAkxa+jjKQhuZQyE3VhHWbejZWybyZPQ0m2M+JlC9lTOW4pD62iZD3OsfcGHCGEnQkeXCvZaAmjcMw4piATX4fOZwaNuDKNEHVG2gjRGtiLhLSauiFgGMQi8JRjQ4CdQNOYwxVilBAA"><img alt="Áramkör"  src="/szte-FBN609L-2023-2/_astro/feladat1.a1T2KnBx_17c6XO.svg" width="655" height="1063" loading="lazy" decoding="async"></a></p>
 <h2 id="2-feladat-digitális-kulcs-lakat">2. feladat: Digitális kulcs lakat</h2>

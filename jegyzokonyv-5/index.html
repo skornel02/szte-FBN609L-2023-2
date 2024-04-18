@@ -8,16 +8,8 @@ Katt ide a megnyitásához!
 </a> </object> </div> </div>  <h2 class="text-2xl text-center mt-8">
 Számolások (Jupyter notebookok)
 </h2> <h1 id="jegyzőkönyv-5-számolások">Jegyzőkönyv 5 számolások</h1>
-<pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">import</span> schemdraw
-<span class="token keyword">from</span> schemdraw <span class="token keyword">import</span> logic
-<span class="token keyword">from</span> schemdraw<span class="token punctuation">.</span>parsing <span class="token keyword">import</span> logicparse
-<span class="token keyword">from</span> sympy <span class="token keyword">import</span> symbols<span class="token punctuation">,</span> Not<span class="token punctuation">,</span> Or<span class="token punctuation">,</span> And
-<span class="token keyword">from</span> sympy<span class="token punctuation">.</span>logic<span class="token punctuation">.</span>boolalg <span class="token keyword">import</span> simplify_logic</code></pre>
-<pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">def</span> <span class="token function">logic_form_print</span><span class="token punctuation">(</span>formula<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>formula<span class="token punctuation">)</span><span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"|"</span><span class="token punctuation">,</span> <span class="token string">"∪"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"&#x26;"</span><span class="token punctuation">,</span> <span class="token string">"∩"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">from</span> schemdraw <span class="token keyword">import</span> logic
+<span class="token keyword">from</span> sympy <span class="token keyword">import</span> symbols</code></pre>
 <h2 id="1-feladat-rs-tároló">1. feladat: RS tároló</h2>
 <pre class="language-python"><code is:raw="" class="language-python">a1<span class="token punctuation">,</span> a0<span class="token punctuation">,</span> b1<span class="token punctuation">,</span> b0 <span class="token operator">=</span> symbols<span class="token punctuation">(</span><span class="token string">'a1,a0,b1,b0'</span><span class="token punctuation">)</span>
 
@@ -31,7 +23,7 @@ S | R| Q     |¬Q     | Jelentés
 """</span>
 
 logic<span class="token punctuation">.</span>Table<span class="token punctuation">(</span>truth_table<span class="token punctuation">,</span> colfmt<span class="token operator">=</span><span class="token string">'c|c|c|c||c'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">,</span> font<span class="token operator">=</span><span class="token string">"times new roman"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_4_0.O4t-bKvx_NLlAO.svg" width="257.1156" height="145.8" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_3_0.E1YekGog_ZvNSS5.svg" width="257.1156" height="145.8" loading="lazy" decoding="async"></p>
 <h3 id="áramkör">Áramkör</h3>
 <p><a href="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgAZEJmvcGmt1Yp+gqlQBmAQwA2AZwbVInbrxCYRLMCI1Q90+YqTKAsqPMoUgsAL0poCNmZuDdaPrqr3HAD3WQIMFx1MGJwbHpXQQBFNj80JBQEDxR6IghCdRi4oTBM7TCWOHCRKJAAZRytTKTMplJ1BDCygCU2MAQIJmwRFxAe8y9qRw6ugd1xjBEhpEcAd1U+Pp4llD5lBZXzLbzxNk21Xe4Bo43F8DXj3suzrd07hEzbtVqrxqf98-uXvHXPu9+bzWf1GIEI1ls2iWtiGVBGnTBrimFw8yJmFE+fSxkOI00xOJEJ1xUE+RMJOisJIW40p4PeVIsyL6ljE+NclJelLOnMEhwwHwWfMydNOpJ0yLpwIZJ1sIpubPMUMGCt0Ss8bCAA"><img alt="Áramkör"  src="/szte-FBN609L-2023-2/_astro/feladat1.QiSC6uu5_Z10CB10.svg" width="480" height="260" loading="lazy" decoding="async"></a></p>
 <h2 id="2-feladat-d-tároló">2. feladat: D tároló</h2>
@@ -46,7 +38,7 @@ C | D| Q     |¬Q     | Jelentés
 """</span>
 
 logic<span class="token punctuation">.</span>Table<span class="token punctuation">(</span>truth_table<span class="token punctuation">,</span> colfmt<span class="token operator">=</span><span class="token string">'c|c|c|c||c'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">,</span> font<span class="token operator">=</span><span class="token string">"times new roman"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_7_0.9WynxT7w_Z10s4gM.svg" width="260.3232" height="118.08" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_6_0.M9Oc0VE4_Z2ndghn.svg" width="260.3232" height="118.08" loading="lazy" decoding="async"></p>
 <h3 id="áramkör-1">Áramkör</h3>
 <p><a href="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgAZEJ4wkQmtzCEqAqOIBmAQwA2AZwbVInbrxC5BLEesiCqVafMVJlADyEIINTWGyCa5QSkEBhNmEvdsKcNfU+wPyofKgR3TyZvEBQ8PH9o2PEfJDCAd24aOOEqSIDtZXSmTPAYrwDS5Q8IMUDBMFLapOowqv4nDHK4zBDo8TTfOr9GsGIQtnTh0fiRsfSomfiUZyhxxeWxFAQ+AoHojt2lvVXGw9ou5Z3i0+KwDG3Vm7u28HyHrsSNxJ35vxqK46GQwaQQB7U6e1mtGE0RoVFhwVhK3SNGhrB88PA9SROjqpWw2D4am+aGiW3UBNJ9zmJMa+L49TixKoC28zJByNRU1Z4Cml2hzjhnMhGh5Pjp0QuqxF2RxouxKPp2mlrw59KxCpe+nCEHFAtocBh+l6oW15LV6INaKaKVNes2fBF9utFFtiIZsvdwWabAAkqo+HgcmorfpoDbCmoxDwA1qI+b-SVGato4mMll-nHUynutjs-tchDc2oRQWRZd3nErmTy5SXhKjhM+KciucG2n6+2ZTWYnEoj3sSd9nb9js9VaFiHjlNx1MxDsFlHI227W6pnr52vVwEsUza9zTrvTv2FqPEgtTifVhe18tGqO3X4L+z-MEyY7q2wALJQ+M0YM76Iwy-H9DVoNR10AsJzEoCAUHxCgRmiCknEEABFNhoMgCAwEgZJEJwpAmzQtggA"><img alt="Áramkör"  src="/szte-FBN609L-2023-2/_astro/feladat2.kWu0SBFz_Z1YBtsL.svg" width="819" height="360" loading="lazy" decoding="async"></a></p>
 <h2 id="3-feladat-8-bites-számláló">3. feladat: 8 bites számláló</h2>

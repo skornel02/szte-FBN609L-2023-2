@@ -8,17 +8,6 @@ Katt ide a megnyitásához!
 </a> </object> </div> </div>  <h2 class="text-2xl text-center mt-8">
 Számolások (Jupyter notebookok)
 </h2> <h1 id="jegyzőkönyv-9-számolások">Jegyzőkönyv 9 számolások</h1>
-<pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">import</span> schemdraw
-<span class="token keyword">from</span> schemdraw <span class="token keyword">import</span> logic
-<span class="token keyword">from</span> schemdraw<span class="token punctuation">.</span>parsing <span class="token keyword">import</span> logicparse
-<span class="token keyword">from</span> sympy <span class="token keyword">import</span> symbols<span class="token punctuation">,</span> Not<span class="token punctuation">,</span> Or<span class="token punctuation">,</span> And
-<span class="token keyword">from</span> sympy<span class="token punctuation">.</span>logic<span class="token punctuation">.</span>boolalg <span class="token keyword">import</span> simplify_logic
-<span class="token keyword">from</span> tabulate <span class="token keyword">import</span> tabulate</code></pre>
-<pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">def</span> <span class="token function">logic_form_print</span><span class="token punctuation">(</span>formula<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>formula<span class="token punctuation">)</span><span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"|"</span><span class="token punctuation">,</span> <span class="token string">"∪"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"&#x26;"</span><span class="token punctuation">,</span> <span class="token string">"∩"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <h2 id="1-feladat-bit-shifterek">1. feladat: Bit shifterek</h2>
 <p>A feladat megismerkedni a 74LS194es shift-register használatával.</p>
 <h3 id="a">A</h3>

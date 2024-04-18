@@ -8,11 +8,7 @@ Katt ide a megnyitásához!
 </a> </object> </div> </div>  <h2 class="text-2xl text-center mt-8">
 Számolások (Jupyter notebookok)
 </h2> <h1 id="jegyzőkönyv-2-számolások">Jegyzőkönyv 2 számolások</h1>
-<pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">import</span> schemdraw
-<span class="token keyword">from</span> schemdraw <span class="token keyword">import</span> logic
+<pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">from</span> schemdraw <span class="token keyword">import</span> logic
 <span class="token keyword">from</span> schemdraw<span class="token punctuation">.</span>parsing <span class="token keyword">import</span> logicparse</code></pre>
 <h2 id="1-feladat-programozható-igazságtábla">1. feladat: Programozható igazságtábla</h2>
 <p>Ha V vonalon jel van, akkor X jelet invertáljuk, ha V vonalon nincs jel, akkor X értékét adjuk át.</p>
@@ -27,11 +23,11 @@ Q | V | Y
 """</span>
 
 logic<span class="token punctuation">.</span>Table<span class="token punctuation">(</span>truth_table<span class="token punctuation">,</span> colfmt<span class="token operator">=</span><span class="token string">'c|c||c'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">,</span> font<span class="token operator">=</span><span class="token string">"times new roman"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_3_0.-QfSW65D_2qqaTV.svg" width="98.2008" height="145.8" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_3_0.l4pMMRP9_1b4Co6.svg" width="98.2008" height="145.8" loading="lazy" decoding="async"></p>
 <pre class="language-python"><code is:raw="" class="language-python">logicparse<span class="token punctuation">(</span><span class="token string">'X ⊕ V'</span><span class="token punctuation">,</span> outlabel<span class="token operator">=</span><span class="token string">"Y"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_4_0.1r8P5JSy_1OxdGc.svg" width="98.997266" height="46.008" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_4_0.XSfoiMxU_gQYlB.svg" width="98.997266" height="46.008" loading="lazy" decoding="async"></p>
 <pre class="language-python"><code is:raw="" class="language-python">logicparse<span class="token punctuation">(</span><span class="token string">'(X and not V) or (not X and V)'</span><span class="token punctuation">,</span> outlabel<span class="token operator">=</span><span class="token string">"Y"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_5_0.XxFdifQj_YF1Bl.svg" width="246.597266" height="106.2" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_5_0.9xPbNDL8_21DfyE.svg" width="246.597266" height="106.2" loading="lazy" decoding="async"></p>
 <h2 id="2-feladat-jel-választó">2. feladat: Jel választó</h2>
 <p>S jellel ki tudjuk választani, hogy X0 (hamis) vagy X1 (igaz) értéket adjuk kimenetnek</p>
 <pre class="language-python"><code is:raw="" class="language-python">truth_table <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
@@ -44,9 +40,9 @@ logic<span class="token punctuation">.</span>Table<span class="token punctuation
 """</span>
 
 logic<span class="token punctuation">.</span>Table<span class="token punctuation">(</span>truth_table<span class="token punctuation">,</span> colfmt<span class="token operator">=</span><span class="token string">'c|c|c||c'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">,</span> font<span class="token operator">=</span><span class="token string">"times new roman"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_7_0.IxLZgEt2_Zj9Dfb.svg" width="144.216" height="145.8" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_7_0.QMkoyVQl_MJSRY.svg" width="144.216" height="145.8" loading="lazy" decoding="async"></p>
 <pre class="language-python"><code is:raw="" class="language-python">logicparse<span class="token punctuation">(</span><span class="token string">'(S and X0) or (not S and X1)'</span><span class="token punctuation">,</span> outlabel<span class="token operator">=</span><span class="token string">"Y"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_8_0.UmmgUXF9_Z2qyXK.svg" width="245.970312" height="106.2" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_8_0.WRcc3REs_Z1gw6Om.svg" width="245.970312" height="106.2" loading="lazy" decoding="async"></p>
 <h2 id="3-feladat-41-dekódoló">3. feladat: 4=>1 dekódoló</h2>
 <p>Egy két bites csatornán érkező kódot kell dekódolni négy csatornára. Az a csatorna lesz hamis értékű, amelyik ki van választva</p>
 <pre class="language-python"><code is:raw="" class="language-python">truth_table <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
@@ -62,15 +58,15 @@ A0 | A1 | Y0 | Y1 | Y2 | Y3
 """</span>
 
 logic<span class="token punctuation">.</span>Table<span class="token punctuation">(</span>truth_table<span class="token punctuation">,</span> colfmt<span class="token operator">=</span><span class="token string">'c|c||c|c|c|c'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">,</span> font<span class="token operator">=</span><span class="token string">"times new roman"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_10_0.d7A-oEM8_272Yth.svg" width="247.176" height="145.8" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_10_0.FU0Tiyyw_Z2gOCTX.svg" width="247.176" height="145.8" loading="lazy" decoding="async"></p>
 <pre class="language-python"><code is:raw="" class="language-python">logicparse<span class="token punctuation">(</span><span class="token string">'A1 or A0'</span><span class="token punctuation">,</span> outlabel<span class="token operator">=</span><span class="token string">"Y0"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_11_0.PvX7H1fB_Z1F4LDa.svg" width="114.891797" height="46.008" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_11_0.peheN5Nh_xQTwf.svg" width="114.891797" height="46.008" loading="lazy" decoding="async"></p>
 <pre class="language-python"><code is:raw="" class="language-python">logicparse<span class="token punctuation">(</span><span class="token string">'not A0 or A1'</span><span class="token punctuation">,</span> outlabel<span class="token operator">=</span><span class="token string">"Y1"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_12_0.woVGYrGr_1va1Kx.svg" width="190.491797" height="61.254" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_12_0.azbAIb8G_1sX11b.svg" width="190.491797" height="61.254" loading="lazy" decoding="async"></p>
 <pre class="language-python"><code is:raw="" class="language-python">logicparse<span class="token punctuation">(</span><span class="token string">'A0 or not A1'</span><span class="token punctuation">,</span> outlabel<span class="token operator">=</span><span class="token string">"Y2"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_13_0.3XgGw-F8_Z6yzc.svg" width="190.491797" height="61.254" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_13_0.wQQv9IX7_Z1lSmcg.svg" width="190.491797" height="61.254" loading="lazy" decoding="async"></p>
 <pre class="language-python"><code is:raw="" class="language-python">logicparse<span class="token punctuation">(</span><span class="token string">'A1 nand A0'</span><span class="token punctuation">,</span> outlabel<span class="token operator">=</span><span class="token string">"Y3"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_14_0.oZjNLgFO_Vx6Ax.svg" width="113.091797" height="46.8" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_14_0.zIJTFOUt_9MuoU.svg" width="113.091797" height="46.8" loading="lazy" decoding="async"></p>
 <h3 id="szimulátor">Szimulátor</h3>
 <p><a href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgAZEJ7FcFPN14hihKOIBmAQwA2AZwbVIncWAHjR4qtPmKkygLIgUKGuBpmUCMWAviU0BGyMnL+Y9ePuqDpy9Mg2NhiVmJBYj6OzsYBmHyhxhh8kU4AHsYE4JSBrFn0lmYAmsrpAvFgSNi5KGCCBSCF7KWZmMQ5EGW0xkUobM182DQQVcN29YXYfdw0YnhULOR4+d0gAIJN3Gogc+CLywGrygDuQnxqgjxnhFTKFWfEZ3au5mY+4k4nYA-g16c-N2xPt9zqp1MoAJLgb7hGJmGE3RwUNgVKhgX4wr4DYL2d6A0GCVHfY5-Z6Y2FQPGXf5-MnEwlXekUk5UtHzYQCAmU4TYBAMwK8pnU3g3QJoQVUYX2TzEqnPFlEtiQ1lQ+6qrSIj6qInk24CsloQTPA04pBOO4qxLxWJJE1IpW-DkWx0I0145WO2V4TnM9lev485Ju74JHzSvGhiI6thAA"><img alt="áramkör"  src="/szte-FBN609L-2023-2/_astro/feladat3.iHUg9-bI_1P4fJv.webp" width="767" height="632" loading="lazy" decoding="async"></a></p>
 <h3 id="alkatrészek">Alkatrészek</h3>
@@ -93,7 +89,7 @@ X0 | X1 | X2 | X3 | Y1 | Y0
 """</span>
 
 logic<span class="token punctuation">.</span>Table<span class="token punctuation">(</span>truth_table<span class="token punctuation">,</span> colfmt<span class="token operator">=</span><span class="token string">'c|c|c|c||c|c'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">,</span> font<span class="token operator">=</span><span class="token string">"times new roman"</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_17_0.Um03DLYJ_Z8Iz7O.svg" width="247.176" height="145.8" loading="lazy" decoding="async"></p>
+<p><img alt="svg"  src="/szte-FBN609L-2023-2/_astro/output_17_0.NpM8U9Pk_10Bzv8.svg" width="247.176" height="145.8" loading="lazy" decoding="async"></p>
 <h3 id="szimulátor-1">Szimulátor</h3>
 <p><a href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgAZEJ7FcFPN14hihKOIBmAQwA2AZwbVIbAB7caYvFRbk89GiBQGAGtlWGQWkNgh7ahkyk7gxYAS5FiqVafMVJlNUpLKgxiS30HEGN2LkIDN0F4z3EfWQUlc2JBKzddSKNo5S5WPkTwNxTvEF8MgLYAdyEy9x4ywm9G5pcqAUEwDqg2AFlrNEMEMWwEPhRJ8RRoBHNsDF7CemxSQ0IxA0KATUDrNfA7LfCwPD2og-ZR3iowDCmZ8BeFpbYwN773qfGzy8FioyyaA34-VcxD4ynB0NmeH6MKGP0RgjmAN68164jB3QG2mEmFhXTahgw6IppKayUxIGS5WUAEkeoZCmAUShCt4lhRvsFObMaL1CkZqrD+U1ufsRYYkQ5OrT9vMhRMvF1CeyEmIZUN4eAURC9ccwJByGAaAlLeAaOQEnwAFwASjYQA"><img alt="áramkör"  src="/szte-FBN609L-2023-2/_astro/feladat4.hryGInRZ_2AKQj.webp" width="886" height="458" loading="lazy" decoding="async"></a></p>
 <h3 id="alkatrészek-1">Alkatrészek</h3>

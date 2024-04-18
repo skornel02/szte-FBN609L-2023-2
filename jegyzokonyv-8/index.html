@@ -9,16 +9,9 @@ Katt ide a megnyitásához!
 Számolások (Jupyter notebookok)
 </h2> <h1 id="jegyzőkönyv-8-számolások">Jegyzőkönyv 8 számolások</h1>
 <pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">import</span> schemdraw
-<span class="token keyword">from</span> schemdraw <span class="token keyword">import</span> logic
-<span class="token keyword">from</span> schemdraw<span class="token punctuation">.</span>parsing <span class="token keyword">import</span> logicparse
-<span class="token keyword">from</span> sympy <span class="token keyword">import</span> symbols<span class="token punctuation">,</span> Not<span class="token punctuation">,</span> Or<span class="token punctuation">,</span> And
-<span class="token keyword">from</span> sympy<span class="token punctuation">.</span>logic<span class="token punctuation">.</span>boolalg <span class="token keyword">import</span> simplify_logic
-<span class="token keyword">from</span> tabulate <span class="token keyword">import</span> tabulate</code></pre>
-<pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">def</span> <span class="token function">logic_form_print</span><span class="token punctuation">(</span>formula<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>formula<span class="token punctuation">)</span><span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"|"</span><span class="token punctuation">,</span> <span class="token string">"∪"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"&#x26;"</span><span class="token punctuation">,</span> <span class="token string">"∩"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<span class="token keyword">from</span> tabulate <span class="token keyword">import</span> tabulate
+<span class="token keyword">from</span> scipy<span class="token punctuation">.</span>stats <span class="token keyword">import</span> linregress</code></pre>
 <h2 id="1-feladat-adc">1. feladat: ADC</h2>
 <p>A feladat egy Analóg Digitál (C)konverter készítése.</p>
 <h3 id="a">A</h3>
@@ -27,9 +20,7 @@ Számolások (Jupyter notebookok)
 <h3 id="b">B</h3>
 <h4 id="áramkör-1">Áramkör</h4>
 <p><a href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgDOB0YzCsICMZICYaoOyYMxgByoBsAnCZiHBAgCw6UCmAtIogFABKIOqSmR3XolT5wYmtTEQUcNgA8QqBK1F0kqRCBpIBAJwYAzNrpAkBw0WaQleEdDDYB3QXwE9rt46fM2dERL7+sF6IRP6+qKjaAbZIwSaR0RH4ojFiyA4m7mlWaUGZfuqpYR5i9mBeiUWKUaV28Yop1SKpgYrBzlYt3nVOro2p-IoS4H2IQ1H+JZOjzqF2I-O9zlVpVTMVK7UzSgIbfbvDdnB7TZs6iicgRNqH5zeX5jS3V+eIz481LwLn61frZzGH2672+s2utyaDzunAuhyY7ju4kk0igsgUTBGMyYezU0QEAEsAHYABwArgAXNgAc24OCe2hw9MK0gOTQsX2qv1qHKWHLeJQ5uRE4KZDLp5hFFQAhiB8HYmvLuHBeKIEPlYHZIHB3kQAik8BISDgrspNTLCiCSibVZR0ub-Gh8EQ4DRyGB+GBUEzjXaMsFZTsmjMbXK7RrYFBMGBxq6cPg4GY3cIEGbNWzUiKxVy2Ig4BQ3eLXdEPhAKKyAhQeBBDcreLWaH1nqorERaoXwW3tB2u4pMJ5nM2tA9E7waA9zqPh9op1gB1oaKp3CcIHR5yutMvpv3wUOJKurPvd4eYFouiNzkP6aoldfd7eiDf6qJL0r0C29gRd4uJdPf5eHmzcdoiGACQIEDtxh+Jtcg+IdQW-VI4J-WtzlvfBtFvFVwSWUNcMfcEQ2wkMCIqABCEAABNDGlMkABsKTEABBMAABomMQdjeAAIVQVjuM47iIAABV0AkAHsxIpABPAAdABnaiAGNxOokwAH51MQWSAEcMlkoktLAXSY2Mol9J0mBtMMzSTJgAy2HfUojyqI8IGogxaIY8NCKaFymmzX4AuZat-z6UK71rO9ziigiG3cGKwG7RE-ISjM-1C4DRXQDKcrcsZfCPNJooK+sCJIl9Ss3IQSjXHDauya1SL6dDMNXCcWvapIxw6+NhhAAAxTRUQQFgQAANXEhjpWpBg2CAA"><img alt="Áramkör"  src="/szte-FBN609L-2023-2/_astro/feladat1b.YNRJwjto_Z2p8tnJ.svg" width="804" height="478" loading="lazy" decoding="async"></a></p>
-<pre class="language-python"><code is:raw="" class="language-python"><span class="token keyword">from</span> scipy<span class="token punctuation">.</span>stats <span class="token keyword">import</span> linregress
-
-V_be <span class="token operator">=</span> pd<span class="token punctuation">.</span>array<span class="token punctuation">(</span>
+<pre class="language-python"><code is:raw="" class="language-python">V_be <span class="token operator">=</span> pd<span class="token punctuation">.</span>array<span class="token punctuation">(</span>
     <span class="token punctuation">[</span>
         <span class="token number">400</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token operator">**</span> <span class="token operator">-</span><span class="token number">6</span><span class="token punctuation">,</span>
         <span class="token number">700</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token operator">**</span> <span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">,</span>
@@ -60,7 +51,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <span class="token comment"># create table and show it</span>
 table <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"v_be"</span><span class="token punctuation">:</span> V_be<span class="token punctuation">,</span> <span class="token string">"N_ki"</span><span class="token punctuation">:</span> N_ki<span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>tabulate<span class="token punctuation">(</span>table<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">"#"</span><span class="token punctuation">,</span> <span class="token string">"Bemenet [V]"</span><span class="token punctuation">,</span> <span class="token string">"Kimenet [N]"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> tablefmt<span class="token operator">=</span><span class="token string">"tsv"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="png"  src="/szte-FBN609L-2023-2/_astro/output_6_0.Ud5ypLKB_Z1LlvBa.webp" width="567" height="460" loading="lazy" decoding="async"></p>
+<p><img alt="png"  src="/szte-FBN609L-2023-2/_astro/output_5_0.Ud5ypLKB_Z26ADdY.webp" width="567" height="460" loading="lazy" decoding="async"></p>
 <pre class="language-plaintext"><code is:raw="" class="language-plaintext">  #	  Bemenet [V]	  Kimenet [N]
   0	       0.0004	            0
   1	       0.7   	            0
