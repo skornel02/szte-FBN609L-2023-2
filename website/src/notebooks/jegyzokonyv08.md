@@ -3,20 +3,9 @@
 
 ```python
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
-import schemdraw
-from schemdraw import logic
-from schemdraw.parsing import logicparse
-from sympy import symbols, Not, Or, And
-from sympy.logic.boolalg import simplify_logic
 from tabulate import tabulate
-```
-
-
-```python
-def logic_form_print(formula) -> None:
-    print(str(formula).upper().replace("|", "∪").replace("&", "∩").replace(" ", ""))
+from scipy.stats import linregress
 ```
 
 ## 1. feladat: ADC
@@ -35,8 +24,6 @@ A feladat egy Analóg Digitál (C)konverter készítése.
 
 
 ```python
-from scipy.stats import linregress
-
 V_be = pd.array(
     [
         400 * 10 ** -6,
@@ -72,7 +59,7 @@ print(tabulate(table, ["#", "Bemenet [V]", "Kimenet [N]"], tablefmt="tsv"))
 
 
     
-![png](./jegyzokonyv08/output_6_0.png)
+![png](./jegyzokonyv08/output_5_0.png)
     
 
 

@@ -3,20 +3,9 @@
 
 ```python
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
-import schemdraw
-from schemdraw import logic
-from schemdraw.parsing import logicparse
-from sympy import symbols, Not, Or, And
-from sympy.logic.boolalg import simplify_logic
 from tabulate import tabulate
-```
-
-
-```python
-def logic_form_print(formula) -> None:
-    print(str(formula).upper().replace("|", "∪").replace("&", "∩").replace(" ", ""))
+from scipy.stats import linregress
 ```
 
 ## 1. feladat: DAC
@@ -29,8 +18,6 @@ A feladat egy Digitál analóg konverter készítése, ami a fizikai kapcsolók 
 
 
 ```python
-from scipy.stats import linregress
-
 N_be = pd.array([0, 1, 2, 3, 4, 5, 6, 7])
 
 V_ki = pd.array(
@@ -66,7 +53,7 @@ print(tabulate(table, ["#", "Bemenet [N]", "Kimenet [V]"], tablefmt="tsv"))
 
 
     
-![png](./jegyzokonyv07/output_5_0.png)
+![png](./jegyzokonyv07/output_4_0.png)
     
 
 

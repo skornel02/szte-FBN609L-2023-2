@@ -1,8 +1,14 @@
 ---
+import PdfViewer from "../components/PdfViewer.astro";
 import JegyzokonyvLayout from "../layouts/JegyzokonyvLayout.astro";
-
+import Notebook10 from '../notebooks/jegyzokonyv10.md';
 ---
 
 <JegyzokonyvLayout number={10}>
-
+    <h2 class="text-2xl text-center"> Feladatok </h2>
+    <PdfViewer link="https://titan.physx.u-szeged.hu/~opthome/dlabor/DL-10.pdf"/>
+    <h2 class="text-2xl text-center mt-8">
+        Számolások (Jupyter notebookok)
+    </h2>
+    <Notebook10 />
 </JegyzokonyvLayout>

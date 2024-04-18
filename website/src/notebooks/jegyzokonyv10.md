@@ -1,0 +1,38 @@
+# Jegyzőkönyv 10 számolások
+
+## 1. feladat: Kétszínű LEDek
+
+A feladat megismerkedni egy kétszínű leddel és megidomítani.
+
+![LED](./jegyzokonyv10/led.png)
+
+### A
+#### Áramkör
+
+[![Áramkör](./jegyzokonyv10/feladat1.svg)](https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l5A2ATAVhATgdA7LlBmBFFADgBYFsEEQVJaQz9aBTAWjDACgAlEDmpn4IyGGvSRRoaJNJCy09GCl4h8SCShpJsk1OPngJchVCkqwyWuklgkJa7ZuGAJiwBmAQwCuAGwAubL4sLuBmSrDclpLIomDOseD2rh4+AUEhZhARkNwA7iCJdg4IkA7FUFwFpeUJSHHOkFWFZUkOKM4VTdWt8ZIdTpJNYOSMJBK6tMk6Q+BcAOZj9PiQomTjahrhC0ttu2BkokpcI2sbQijJQvT5tFTykzUPQ81PMy0O9cc95clP169Whd7gC+Ot6EJDg5rmYyPRFOFpKpwc9GOtUUpGPDwuYuAAnD7yOGEvpZeAnET8SxiTY0+hHHFoLy+ADOLEqBU4ei0VO0PO6vPkPIE4EazQ2lhuyUlHJppI0tReAElGOp5PVVdyDMpaM0mFrNWoEA4Bfqje1DubZShLaSzaSBQrRZJ1DcxWA6OA7PJet6vmZZioChLnEIHc0w6HtK0BRUZRUnbG-TyuUTjir7OVSpsbtmImgg3sZe8ZcNPa7wPd8JdKwZ+rqPcstv7q3piRIzIWS9nM+A881uxM9BrHZMkBqK+Ojica4RPq04RIY4YC81W7WreGCuuW8b1dOCoufQ57WLD2q7Wqp5UgA)
+
+## 2. feladat: Reed relé
+
+Mágneses tér érzekelés
+
+
+### A
+
+#### Áramkör
+
+[![Áramkör](./jegyzokonyv10/feladat2a.svg)](https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l5A2ATAVhATgdA7LlBmBFFADgBYFsEEQVJaQz9aBTAWjDACgAlEBMuDKCwNMMKiSy9NPTnQUXAM78RE0fXGDNIAGYBDADZKWXAB61mo7OATpw2eoKSCeLFgBMAOkoBOLQ30ATy4wYhB8QnAkEkZRaNi5LgB3RnwkBMYyWLAYqBSsnLzhWJIk1JKQMojIQWrIUJQMpGwM3Nj8Wsz6DJkCzpE8yLE8htSBqp6UGnqC1BmpsVz81PnwZZa25bHbTQlNoW1+qI0Ik-Re47ELkBdNG4a+O-AbpEgch9uoBVufpB-5IpfA4FrdppNJGB4KFkCCIQIIRkPCwDABXQwAFzYhk84Ek8kg3AA5qp4YJMPiuEA)
+
+### B
+
+#### Áramkör
+
+[![Áramkör](./jegyzokonyv10/feladat2b.svg)](https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l5A2ATAVhATgdA7LlBmBFFADgBYFsEEQVJaQz9aBTAWjDACgAlEBMuDKCwNMMKiSy9NPTnQUXAM78RE0fXGDNIAGYBDADZKWXAB61mo7OATpw2eoKSCeLFgBMAOkoBOLQ30ATy4wYhB8QnAkEkZRaNi5LgB3RnwkBMYyWLAYqBSsnLzhWJIk1JKQMojIQWrIAvxazMixPIbUprr6VBp6go0hZ2wMrXzOqMHW8HQMjojJ2ZAXTSWGvhWZjKRIHLXlqAVlo6Qj+UVfBz6elGvJMHhQ5Cuq+gFXg48WAwBXQwAXNiGTzgSTySDcADmqg+70wYIKSBGQxqam0jWaYy6mQaQA)
+
+## 3. feladat: Fotókapu
+
+Csík számolás
+
+
+### Áramkör
+
+[![Áramkör](./jegyzokonyv10/feladat3.svg)](https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l5A2ATAVhATgdA7LlBmBFFADgBYFsEEQVJaQz9aBTAWjDACgAlEBMuDKCwNMMKiSy9NPTnQUXAM78RE0fXGDNIAGYBDADZKWXAB79mo7OATpw2eoKSCAYgHsALu4DW+gA4ArgA6SlwA7raaEkguQtpcos5xWiBI2EjxUpJykgbGLFBcZGD2+EjRgoQkWU5cADJpcS6aVGnSOXpGJgyQXEA)

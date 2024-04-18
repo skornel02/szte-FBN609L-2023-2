@@ -2,20 +2,8 @@
 
 
 ```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import schemdraw
 from schemdraw import logic
-from schemdraw.parsing import logicparse
-from sympy import symbols, Not, Or, And
-from sympy.logic.boolalg import simplify_logic
-```
-
-
-```python
-def logic_form_print(formula) -> None:
-    print(str(formula).upper().replace("|", "∪").replace("&", "∩").replace(" ", ""))
+from sympy import symbols
 ```
 
 ## 1. feladat: Jelzőlámpa-vezérlő
@@ -45,7 +33,7 @@ logic.Table(truth_table, colfmt='c||c|c|c', fontsize=18, font="times new roman")
 
 
     
-![svg](./jegyzokonyv06/output_4_0.svg)
+![svg](./jegyzokonyv06/output_3_0.svg)
     
 
 
@@ -100,7 +88,7 @@ logic.Table(truth_table, colfmt='c||c|c|c|c|c|c|c', fontsize=18, font="times new
 
 
     
-![svg](./jegyzokonyv06/output_7_0.svg)
+![svg](./jegyzokonyv06/output_6_0.svg)
     
 
 

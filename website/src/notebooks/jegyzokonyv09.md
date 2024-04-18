@@ -1,24 +1,5 @@
 # Jegyzőkönyv 9 számolások
 
-
-```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import schemdraw
-from schemdraw import logic
-from schemdraw.parsing import logicparse
-from sympy import symbols, Not, Or, And
-from sympy.logic.boolalg import simplify_logic
-from tabulate import tabulate
-```
-
-
-```python
-def logic_form_print(formula) -> None:
-    print(str(formula).upper().replace("|", "∪").replace("&", "∩").replace(" ", ""))
-```
-
 ## 1. feladat: Bit shifterek
 
 A feladat megismerkedni a 74LS194es shift-register használatával.

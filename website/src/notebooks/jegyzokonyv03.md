@@ -2,13 +2,10 @@
 
 
 ```python
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
-import schemdraw
 from schemdraw import logic
 from schemdraw.parsing import logicparse
-from sympy import symbols, Not, Or, And
+from sympy import symbols
 from sympy.logic.boolalg import simplify_logic
 ```
 
